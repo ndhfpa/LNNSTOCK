@@ -1,0 +1,206 @@
+/* bagian nurul khoyimah start */
+
+/* Prinsip FEFO & FIFO Card */
+.principle-banner {
+    background: linear-gradient(135deg, #075B75 0%, #0F766E 100%);
+    color: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-card);
+}
+
+.principle-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.principle-desc {
+    font-size: 12.5px;
+    opacity: 0.9;
+    max-width: 700px;
+}
+
+/* Urgent Batch Action Banner */
+.urgent-batch-banner {
+    background-color: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    border-radius: 16px;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.urgent-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.urgent-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #FEE2E2;
+    color: #DC2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.urgent-text-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #991B1B;
+}
+
+.urgent-text-desc {
+    font-size: 12px;
+    color: #B91C1C;
+    margin-top: 2px;
+}
+
+/* Live Stock Simulator Cards pada Form Mutasi */
+.stock-simulator-wrap {
+    background-color: #F8F5EE;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.simulator-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.simulator-title {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.simulator-badge {
+    font-size: 11px;
+    background-color: #E2E8F0;
+    color: #334155;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.simulator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.simulator-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.sim-label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #64748B;
+    text-transform: uppercase;
+}
+
+.sim-qty {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 4px 0;
+}
+
+.sim-status {
+    font-size: 11.5px;
+    font-weight: 600;
+}
+
+/* Tabs Status Riwayat Mutasi */
+.status-tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.status-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.status-tab-btn:hover {
+    background-color: #F8FAFC;
+    color: var(--primary);
+}
+
+.status-tab-btn.active {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+}
+
+.status-tab-count {
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+.status-tab-btn.active .status-tab-count {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+}
+
+/* Rute Cell */
+.route-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.route-arrow {
+    color: #94A3B8;
+}
+
+@media (max-width: 768px) {
+    .simulator-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* bagian nurul khoyimah end */
+

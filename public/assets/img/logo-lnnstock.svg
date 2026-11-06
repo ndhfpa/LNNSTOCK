@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50" fill="none">
+  <!-- Kotak Logo Biru -->
+  <rect x="2" y="3" width="44" height="44" rx="10" fill="#075B75" />
+  
+  <!-- Ikon Kotak / Pallet Simbolik Gudang -->
+  <path d="M24 12L36 18.5V31.5L24 38L12 31.5V18.5L24 12Z" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" fill="none"/>
+  <path d="M12 18.5L24 25L36 18.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M24 25V38" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="24" cy="20" r="1.5" fill="#38BDF8"/>
+
+  <!-- Tipografi LNNSTOCK -->
+  <text x="56" y="27" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="20" font-weight="800" fill="#0F172A" letter-spacing="1">LNN<tspan fill="#075B75">STOCK</tspan></text>
+  <text x="56" y="41" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#64748B" letter-spacing="0.5">WMS PLATFORM</text>
+</svg>
+
