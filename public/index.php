@@ -3,6 +3,9 @@
 
 session_start();
 
+// Atur zona waktu agar sapaan, tanggal, dan sisa hari FEFO memakai WIB
+date_default_timezone_set('Asia/Jakarta');
+
 // Muat komponen inti MVC
 require_once __DIR__ . '/../core/helpers.php';
 require_once __DIR__ . '/../core/Database.php';
@@ -179,4 +182,3 @@ try {
     exit;
 }
 // bagian bersama end
-
