@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /**
  * Membuka Modal Konfirmasi Hapus Universal
- * @param {string} actionUrl - URL target penghapusan (POST)
+ * @param {string} actionUrl - URL target penghapusan (POST), id disertakan di query string (&id=...)
  * @param {string} itemName  - Nama item yang akan dihapus
  */
 function confirmDelete(actionUrl, itemName) {
@@ -73,6 +73,19 @@ function confirmDelete(actionUrl, itemName) {
     if (modal && form && nameElem) {
         form.action = actionUrl;
         nameElem.textContent = itemName;
+
+        // Ambil id dari query string URL hapus, lalu kirim juga lewat input hidden (POST)
+        // supaya $_POST['id'] di controller terisi.
+        const idHapus = new URL(actionUrl, window.location.href).searchParams.get('id') || '';
+        let inputId = form.querySelector('input[name="id"]');
+        if (!inputId) {
+            inputId = document.createElement('input');
+            inputId.type = 'hidden';
+            inputId.name = 'id';
+            form.appendChild(inputId);
+        }
+        inputId.value = idHapus;
+
         modal.classList.add('show');
     }
 }
@@ -96,4 +109,3 @@ window.addEventListener('click', function (event) {
 });
 
 // bagian bersama end
-
