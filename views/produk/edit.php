@@ -26,20 +26,24 @@
 <?php endif; ?>
 
 <div class="card" style="max-width: 760px; margin: 0 auto;">
-    <form action="<?= base_url('?page=produk&action=edit&id=' . $produk['id']) ?>" method="POST" enctype="multipart/form-data">
+    <form action="<?= base_url('?page=produk&action=edit&id=' . $produk['id']) ?>" method="POST"
+        enctype="multipart/form-data">
         <?= csrf_field() ?>
 
         <div class="form-grid-2">
             <div class="form-group">
                 <label for="kode_sku" class="form-label">Kode SKU <span class="text-danger">*</span></label>
-                <input type="text" id="kode_sku" name="kode_sku" class="form-input" value="<?= e($old['kode_sku']) ?>" required>
+                <input type="text" id="kode_sku" name="kode_sku" class="form-input" value="<?= e($old['kode_sku']) ?>"
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="kategori" class="form-label">Kategori Produk <span class="text-danger">*</span></label>
                 <select id="kategori" name="kategori" class="form-select" required>
-                    <option value="Jelly Cups" <?= ($old['kategori'] === 'Jelly Cups') ? 'selected' : '' ?>>Jelly Cups</option>
-                    <option value="Wafer Roll" <?= ($old['kategori'] === 'Wafer Roll') ? 'selected' : '' ?>>Wafer Roll</option>
+                    <option value="Jelly Cups" <?= ($old['kategori'] === 'Jelly Cups') ? 'selected' : '' ?>>Jelly Cups
+                    </option>
+                    <option value="Wafer Roll" <?= ($old['kategori'] === 'Wafer Roll') ? 'selected' : '' ?>>Wafer Roll
+                    </option>
                     <option value="Biscuits & Cookies" <?= ($old['kategori'] === 'Biscuits & Cookies') ? 'selected' : '' ?>>Biscuits &amp; Cookies</option>
                 </select>
             </div>
@@ -47,38 +51,47 @@
 
         <div class="form-group">
             <label for="nama_produk" class="form-label">Nama Produk Lengkap <span class="text-danger">*</span></label>
-            <input type="text" id="nama_produk" name="nama_produk" class="form-input" value="<?= e($old['nama_produk']) ?>" required>
+            <input type="text" id="nama_produk" name="nama_produk" class="form-input"
+                value="<?= e($old['nama_produk']) ?>" required>
         </div>
 
         <div class="form-grid-2">
             <div class="form-group">
-                <label for="isi_per_karton" class="form-label">Isi per Karton (Pcs) <span class="text-danger">*</span></label>
-                <input type="number" id="isi_per_karton" name="isi_per_karton" class="form-input" min="1" value="<?= e($old['isi_per_karton']) ?>" required>
+                <label for="isi_per_karton" class="form-label">Isi per Karton (Pcs) <span
+                        class="text-danger">*</span></label>
+                <input type="number" id="isi_per_karton" name="isi_per_karton" class="form-input" min="1"
+                    value="<?= e($old['isi_per_karton']) ?>" required>
             </div>
 
             <div class="form-group">
-                <label for="masa_simpan_bulan" class="form-label">Masa Simpan (Bulan) <span class="text-danger">*</span></label>
-                <input type="number" id="masa_simpan_bulan" name="masa_simpan_bulan" class="form-input" min="1" value="<?= e($old['masa_simpan_bulan']) ?>" required>
+                <label for="masa_simpan_bulan" class="form-label">Masa Simpan (Bulan) <span
+                        class="text-danger">*</span></label>
+                <input type="number" id="masa_simpan_bulan" name="masa_simpan_bulan" class="form-input" min="1"
+                    value="<?= e($old['masa_simpan_bulan']) ?>" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="buffer_minimum" class="form-label">Batas Buffer Minimum (Karton) <span class="text-danger">*</span></label>
-            <input type="number" id="buffer_minimum" name="buffer_minimum" class="form-input" min="0" value="<?= e($old['buffer_minimum']) ?>" required>
+            <label for="buffer_minimum" class="form-label">Batas Buffer Minimum (Karton) <span
+                    class="text-danger">*</span></label>
+            <input type="number" id="buffer_minimum" name="buffer_minimum" class="form-input" min="0"
+                value="<?= e($old['buffer_minimum']) ?>" required>
         </div>
 
         <div class="form-group">
             <label for="inputGambarProduk" class="form-label">Ganti Foto / Thumbnail Produk</label>
-            <input type="file" id="inputGambarProduk" name="gambar" class="form-input" accept="image/jpeg,image/png,image/webp">
+            <input type="file" id="inputGambarProduk" name="gambar" class="form-input"
+                accept="image/jpeg,image/png,image/webp">
             <div class="form-help">Biarkan kosong jika tidak ingin mengubah foto produk.</div>
 
             <div class="upload-preview-wrap">
                 <div class="upload-preview-box">
                     <?php if (!empty($produk['gambar']) && file_exists(__DIR__ . '/../../public/uploads/produk/' . $produk['gambar'])): ?>
-                        <img id="previewGambarProduk" src="<?= base_url('uploads/produk/' . $produk['gambar']) ?>" alt="<?= e($produk['nama_produk']) ?>">
+                        <img id="previewGambarProduk" src="<?= base_url('uploads/produk/' . $produk['gambar']) ?>"
+                            alt="<?= e($produk['nama_produk']) ?>">
                     <?php else: ?>
                         <img id="previewGambarProduk" src="" alt="Pratinjau" style="display:none;">
-                        <span class="text-muted" style="font-size:11px;">Belum Ada Foto</span>
+                        <span class="text-muted" style="font-size:11px;">Belum ada foto</span>
                     <?php endif; ?>
                 </div>
             </div>
@@ -91,4 +104,3 @@
     </form>
 </div>
 <!-- bagian lutfi firmansyah end -->
-
